@@ -1,38 +1,88 @@
-.App {
+.custom-logo {
+  width: 50px;        /* 设置圆的直径 */
+  height: 50px;       /* 设置圆的直径 */
+  background-color: #219C90; /* 自定义颜色 */
+  border-radius: 50%; /* 这会使得 div 变成圆形 */
+  /* 其他可能的样式，如边框等 */
+}
+
+.roboto-slab {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.ant-menu-horizontal {
+  white-space: nowrap;
+  overflow: visible !important;
+}
+
+.ant-menu-horizontal .ant-menu-item {
+  display: inline-block;
+  float: none !important;
+}
+
+.ant-menu-horizontal > .ant-menu-item-selected,
+.ant-menu-horizontal > .ant-menu-item:hover {
+  color: #219C90 !important;
+}
+
+.ant-menu-horizontal > .ant-menu-item::after {
+  display: none !important;
+}
+
+.large-title {
+  font-size: 100px !important;
+}
+
+.resume-button, .project-button, .contact-button {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  color: white;
+  font-size: 20px;
+  display: inline-flex; /* 修改为inline-flex */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1; 
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.resume-button {
+  background-color: #219C90;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.resume-button:hover {
+  color: black !important;
+  background-color: white;
+  border-color: black !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.project-button {
+  background-color: #E9B824;
+}
+
+.project-button:hover {
+  color: black !important;
+  background-color: white;
+  border-color: black !important;
+}
+
+.contact-button {
+  background-color: #D83F31;
+}
+
+.contact-button:hover {
+  color: black !important;
+  background-color: white;
+  border-color: black !important;
+}
+
+.button-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  justify-content: flex-start; /* 改为flex-start使按钮组靠左对齐 */
+  align-items: center; /* 垂直居中 */
+  margin-right: 20px; /* 或者增加右边距来向左移动按钮 */
 }
